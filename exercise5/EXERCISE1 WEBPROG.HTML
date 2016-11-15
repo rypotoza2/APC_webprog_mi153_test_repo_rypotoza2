@@ -1,0 +1,80 @@
+
+<HTML>
+<?php
+include_once 'dbconfig.php';
+if(isset($_POST['btn-save']))
+{
+	
+	
+ // variables for input data
+ $first_name = $_POST['first_name'];
+ $last_name = $_POST['last_name'];
+ $city_name = $_POST['city_name'];
+ // variables for input data
+ 
+ // sql query for inserting data into database
+ 
+        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ mysqli_query($con,$sql_query);
+        
+        // sql query for inserting data into database
+ 
+ 
+}
+?> 
+<HEAD>
+<TITLE> MY HOME PAGE </TITLE>
+</HEAD>
+
+<BODY background="girlybground.jpg" background="no-repeat"/>
+	<CENTER> <img src = "cooltext208.png">
+	<BR>
+	<BR> <CENTER><img width ="800" height = "450" src="rainrain.jpg" hspace="40"/>	
+			
+	<BR>
+	<FONT FACE = "Georgia" SIZE = "3" COLOR = "black"> 
+<STYLE>
+	p.solid {border-style: solid;
+			 border-width: 5px; 
+		}
+	h1{ letter-spacing: 6px;
+	    }
+</STYLE>
+	
+	<div id="header">
+ <div id="content">
+    <label>Welcome Users! - By Yours Truly</label>
+    </div>
+</div>
+<div id="body">
+ <div id="content">
+    <form method="post">
+    <table align="center">
+    <tr>
+    <td align="center"><a href="index.php">back to main page</a></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    </tr>
+    <tr>
+    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+    </tr>
+    </table>
+    </form>
+    </div>
+</div>
+	
+<p><a href="https://twitter.com/">Twitter<a/></p>
+   <a href="https://facebook.com/">Facebook<a/></p>
+   
+<audio controls>
+<source src="LoveMyself.mp3" type="audio/mpeg">
+
+</BODY>
+</HTML>
