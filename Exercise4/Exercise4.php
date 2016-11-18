@@ -34,6 +34,23 @@
 <CENTER>
 <?php
 
+include_once 'dbconfig.php';
+if(isset($_POST['btn-save']))
+{
+ // variables for input data
+ $first_name = $_POST['first_name'];
+ $last_name = $_POST['last_name'];
+ $city_name = $_POST['city_name'];
+ // variables for input data
+ 
+ // sql query for inserting data into database
+ 
+        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ mysqli_query($con, $sql_query);
+        
+        // sql query for inserting data into database
+ 
+}
 // define variables and set to empty values
 $Complete_Name = $Nick_name = $Email_Address = $Home_Address = $Cell_No = "";
 $gender = $Comment =  "";
