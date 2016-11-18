@@ -1,12 +1,23 @@
 <?php
 class News extends CI_Controller {
  
+ 
+ 
     public function __construct()
+	
+	
     {
+		
+		
         parent::__construct();
         $this->load->model('news_model');
         $this->load->helper('url_helper');
+		
+		
+		
     }
+ 
+ 
  
     public function index()
     {
@@ -17,6 +28,9 @@ class News extends CI_Controller {
         $this->load->view('news/index', $data);
         $this->load->view('templates/footer');
     }
+ 
+ 
+ 
  
     public function view($slug = NULL)
     {
@@ -32,7 +46,9 @@ class News extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('news/view', $data);
         $this->load->view('templates/footer');
+		
     }
+	
     
     public function create()
     {
@@ -44,6 +60,7 @@ class News extends CI_Controller {
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('text', 'Text', 'required');
  
+ 
         if ($this->form_validation->run() === FALSE)
         {
             $this->load->view('templates/header', $data);
@@ -51,8 +68,11 @@ class News extends CI_Controller {
             $this->load->view('templates/footer');
  
         }
+		
         else
+			
         {
+			
             $this->news_model->set_news();
             $this->load->view('templates/header', $data);
             $this->load->view('news/success');
@@ -85,6 +105,7 @@ class News extends CI_Controller {
             $this->load->view('templates/footer');
  
         }
+		
         else
         {
             $this->news_model->set_news($id);
@@ -107,4 +128,5 @@ class News extends CI_Controller {
         $this->news_model->delete_news($id);        
         redirect( base_url() . 'index.php/news');        
     }
+	
 }
