@@ -280,7 +280,7 @@ $config['error_views_path'] = '';
 |--------------------------------------------------------------------------
 |
 | Leave this BLANK unless you would like to set something other than the default
-| application/cache/ directory.  Use a full server path with trailing slash.
+| application/cache/ directory. It will use a full server path with trailing slash.
 |
 */
 $config['cache_path'] = '';
