@@ -69,6 +69,7 @@ if(isset($_POST['btn-save']))
 	<td><input type="text" name="sex_name" placeholder="Sex" required /></td>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
     </tr>
+	</tr>
 	<STYLE>
 	p.solid {border-style: solid;
 			 border-width: 5px; 
