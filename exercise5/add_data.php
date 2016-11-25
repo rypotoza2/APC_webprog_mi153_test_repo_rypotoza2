@@ -6,8 +6,10 @@ if(isset($_POST['btn-save']))
  // variables for input data
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
+ $nick_name = $_POST['nick_name'];
  $city_name = $_POST['city_name'];
- // variables to input a data
+ $sex_name = $_POST['sex_name'];
+ // variables for input data
  
  // sql query for inserting data into database
  
@@ -32,6 +34,18 @@ if(isset($_POST['btn-save']))
     <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
     </div>
 </div>
+
+
+
+<BODY background="girlybground.jpg" background="no-repeat"/>
+	<CENTER> <img src = "cooltext208.png">
+	<BR>
+	<BR> <CENTER><img width ="800" height = "450" src="rainrain.jpg" hspace="40"/>	
+			
+	<BR>
+	<FONT FACE = "Georgia" SIZE = "3" COLOR = "black"> 
+
+</STYLE>
 <div id="body">
  <div id="content">
     <form method="post">
@@ -46,11 +60,22 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
     </tr>
     <tr>
+	<td><input type="text" name="nick_name" placeholder="NickName" required /></td>
+	</tr>
+	<tr>
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
     <tr>
+	<td><input type="text" name="sex_name" placeholder="Sex" required /></td>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
     </tr>
+	<STYLE>
+	p.solid {border-style: solid;
+			 border-width: 5px; 
+		}
+	h1{ letter-spacing: 6px;
+	    }
+</STYLE>
     </table>
     </form>
     </div>
