@@ -8,10 +8,12 @@ if(isset($_GET['edit_id']))
 }
 if(isset($_POST['btn-update']))
 {
- // variables to input a data
+ // variables for input data
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
+ $nick_name = $_POST['nickname_name'];
  $city_name = $_POST['city_name'];
+ $sex_name = $_POST['sex_name'];
  // variables for input data
 
  // sql query for update data into database
@@ -69,8 +71,14 @@ if(isset($_POST['btn-cancel']))
     <tr>
     <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
     </tr>
+	<tr>
+    <td><input type="text" name="nick_name" placeholder="NickName" value="<?php echo $fetched_row['nick_name']; ?>" required /></td>
+    </tr>
     <tr>
     <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="sex_name" placeholder="Sex" value="<?php echo $fetched_row['sex_name']; ?>" required /></td>
     </tr>
     <tr>
     <td>

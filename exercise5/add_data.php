@@ -13,10 +13,10 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+        $sql_query = "INSERT INTO users(first_name,last_name,nick_name,user_city,sex_name) VALUES('$first_name','$last_name', '$nick_name', '$city_name', '$sex_name')";
  mysqli_query($con,$sql_query);
         
-        // sql query to insert data into database
+        // sql query for inserting data into database
  
 }
 ?>
@@ -69,7 +69,6 @@ if(isset($_POST['btn-save']))
 	<td><input type="text" name="sex_name" placeholder="Sex" required /></td>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
     </tr>
-	</tr>
 	<STYLE>
 	p.solid {border-style: solid;
 			 border-width: 5px; 
