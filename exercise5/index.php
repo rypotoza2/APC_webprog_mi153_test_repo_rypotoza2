@@ -73,7 +73,7 @@ function delete_id(id)
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
         </tr>
         <?php
- }
+ }  
  ?>
     </table>
     </div>
