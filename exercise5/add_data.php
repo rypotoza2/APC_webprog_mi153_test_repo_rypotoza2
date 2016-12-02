@@ -13,7 +13,8 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,nick_name,user_city,sex_name) VALUES('$first_name','$last_name', '$nick_name', '$city_name', '$sex_name')";
+        $sql_query = "INSERT INTO users(first_name,last_name,nick_name,user_city,sex_name) VALUES
+									('$first_name','$last_name', '$nick_name', '$city_name', '$sex_name')";
  mysqli_query($con,$sql_query);
         
         // sql query for inserting data into database
