@@ -78,7 +78,7 @@ function delete_id(id)
     </table>
     </div>
 </div>
-
+// index.php
 </center>
 </body>
 </html>
